@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "fetched_at": "2025-10-24T12:20:01.625979",
+    "item_id": "lkdAZ1VymgU14W9qMB3mU4w9xjy9K1FZ6L6Jy",
+    "access_token": "access-sandbox-55165...",
+    "data_source": "plaid_sandbox"
+  },
+  "accounts": [
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "name": "Plaid Checking",
+      "official_name": "Plaid Gold Standard 0% Interest Checking",
+      "type": "depository",
+      "subtype": "checking",
+      "mask": "0000",
+      "balances": {
+        "available": 100.0,
+        "current": 110.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "6qdvgBW9nJfgep8JMDWPswDx9Kv5ozINd6g8ng",
+      "name": "Plaid Saving",
+      "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+      "type": "depository",
+      "subtype": "savings",
+      "mask": "1111",
+      "balances": {
+        "available": 200.0,
+        "current": 210.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "XdBr8wnjbpSojLmQax9dSvP4G1kWVAuVeQdb8b",
+      "name": "Plaid CD",
+      "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+      "type": "depository",
+      "subtype": "cd",
+      "mask": "2222",
+      "balances": {
+        "available": null,
+        "current": 1000.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "name": "Plaid Credit Card",
+      "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+      "type": "credit",
+      "subtype": "credit card",
+      "mask": "3333",
+      "balances": {
+        "available": null,
+        "current": 410.0,
+        "limit": 2000.0,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "V3rqWgANZoTrLMna38QjCKGnDqjmwzFxKaW9Np",
+      "name": "Plaid Money Market",
+      "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+      "type": "depository",
+      "subtype": "money market",
+      "mask": "4444",
+      "balances": {
+        "available": 43200.0,
+        "current": 43200.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+      "name": "Plaid IRA",
+      "official_name": null,
+      "type": "investment",
+      "subtype": "ira",
+      "mask": "5555",
+      "balances": {
+        "available": null,
+        "current": 320.76,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "name": "Plaid 401k",
+      "official_name": null,
+      "type": "investment",
+      "subtype": "401k",
+      "mask": "6666",
+      "balances": {
+        "available": null,
+        "current": 23631.9805,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "6qdvgBW9nJfgep8JMDWPswDME7nRgWFNd6g8nm",
+      "name": "Plaid Student Loan",
+      "official_name": null,
+      "type": "loan",
+      "subtype": "student",
+      "mask": "7777",
+      "balances": {
+        "available": null,
+        "current": 65262.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "XdBr8wnjbpSojLmQax9dSvPjrgQXZ8CVeQdb8D",
+      "name": "Plaid Mortgage",
+      "official_name": null,
+      "type": "loan",
+      "subtype": "mortgage",
+      "mask": "8888",
+      "balances": {
+        "available": null,
+        "current": 56302.06,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLWxyeVPGgFV61v3Gd",
+      "name": "Plaid HSA",
+      "official_name": "Plaid Cares Health Savings Account",
+      "type": "depository",
+      "subtype": "hsa",
+      "mask": "9001",
+      "balances": {
+        "available": 6009.0,
+        "current": 6009.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "V3rqWgANZoTrLMna38QjCKGd9kLVlQtxKaW9NN",
+      "name": "Plaid Cash Management",
+      "official_name": "Plaid Growth Cash Management",
+      "type": "depository",
+      "subtype": "cash management",
+      "mask": "9002",
+      "balances": {
+        "available": 12060.0,
+        "current": 12060.0,
+        "limit": null,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    },
+    {
+      "account_id": "wPJqK5V8RDSqplQRnAjgHpDlmbZJg4ckWGrPKd",
+      "name": "Plaid Business Credit Card",
+      "official_name": "Plaid Platinum Small Business Credit Card",
+      "type": "credit",
+      "subtype": "credit card",
+      "mask": "9999",
+      "balances": {
+        "available": 4980.0,
+        "current": 5020.0,
+        "limit": 10000.0,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "Plo7bEpBkRsRoPnE6vxwhvB8ww97wZtGZq5NMg",
+      "account_id": "6qdvgBW9nJfgep8JMDWPswDx9Kv5ozINd6g8ng",
+      "amount": 25.0,
+      "date": "2025-10-16",
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "3RdJKvg9nVsVwo8E5B7rtJlqKKwmK5ik34b8a7",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": 5.4,
+      "date": "2025-10-16",
+      "name": "Uber 063015 SF**POOL**",
+      "merchant_name": "Uber",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "pB9A5XVWMbI5GPRJorZdHyrRzzldz6CB3PjK1j",
+      "account_id": "V3rqWgANZoTrLMna38QjCKGnDqjmwzFxKaW9Np",
+      "amount": 5850.0,
+      "date": "2025-10-15",
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "7KlXpVA9RvHJlx8QKmMBUawnppJjpWcRLDy19K",
+      "account_id": "XdBr8wnjbpSojLmQax9dSvP4G1kWVAuVeQdb8b",
+      "amount": 1000.0,
+      "date": "2025-10-15",
+      "name": "CD DEPOSIT .INITIAL.",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "ep1wvJVmM4TEr9o3Nk8qSrGpaa4zami81ABVj1",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 78.5,
+      "date": "2025-10-14",
+      "name": "Touchstone Climbing",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "xj5KrXVQDLHDo6mqbwdvtn7NjjegjwtxvrPAEd",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": -500.0,
+      "date": "2025-10-14",
+      "name": "United Airlines",
+      "merchant_name": "United Airlines",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "dL8ZwJVmMeTBGyv64jgwSGlveej5eLHveVz63V",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": 12.0,
+      "date": "2025-10-13",
+      "name": "McDonald's",
+      "merchant_name": "McDonald's",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "aZ97e3Vm6JIGQn5NxmwJHdApEEBjEzC8LyJe9d",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": 4.33,
+      "date": "2025-10-13",
+      "name": "Starbucks",
+      "merchant_name": "Starbucks",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "4RGZrV8JnwsvrL8W1jbQSEbA33gd3eIX7GV31a",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": 89.4,
+      "date": "2025-10-12",
+      "name": "SparkFun",
+      "merchant_name": "FUN",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "jWP7bgV8L3UWGgbMQBzmUGM7bbVQb9HPqnmGXB",
+      "account_id": "6qdvgBW9nJfgep8JMDWPswDx9Kv5ozINd6g8ng",
+      "amount": -4.22,
+      "date": "2025-10-11",
+      "name": "INTRST PYMNT",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "QqmZJWo3pQfV7jnQB8aDt3a8nn5ZnVf9Eb6a87",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 500.0,
+      "date": "2025-10-01",
+      "name": "United Airlines",
+      "merchant_name": "United Airlines",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "NEgPRn1r8Vhde4oB9ZkaskMvxxqPx3FEmRp7DE",
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+      "amount": 6.33,
+      "date": "2025-09-29",
+      "name": "Uber 072515 SF**POOL**",
+      "merchant_name": "Uber",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "Z4eBqjVmEwSBzonylwRNSdxvAAB8AaCMVZmbKl",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 500.0,
+      "date": "2025-09-26",
+      "name": "Tectra Inc",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "LkoPVbZqpGU7ydLgxE8qSaAnMMGpM1c1GZK9r6",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 2078.5,
+      "date": "2025-09-25",
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "1RmWlwp96rsxraQg5w48uAmkGGQeGxh4l6XmJP",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 500.0,
+      "date": "2025-09-25",
+      "name": "KFC",
+      "merchant_name": "KFC",
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "transaction_id": "M8oP7ZMKg9T87apJVnbBiyJdRR1gRzC3Vap7M1",
+      "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+      "amount": 500.0,
+      "date": "2025-09-25",
+      "name": "Madison Bicycle Shop",
+      "merchant_name": null,
+      "category": null,
+      "subcategory": null,
+      "account_owner": null,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    }
+  ],
+  "investment_holdings": [
+    {
+      "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+      "security_id": "d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+      "institution_price": 1.0,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 0.01,
+      "cost_basis": 1.0,
+      "quantity": 0.01,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "KDwjlXj1Rqt58dVvmzRguxJybmyQL8FgeWWAy",
+      "institution_price": 2.11,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 2.11,
+      "cost_basis": 1.5,
+      "quantity": 1.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "NDVQrXQoqzt5v3bAe8qRt4A7mK7wvZCLEBBJk",
+      "institution_price": 10.42,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 20.84,
+      "cost_basis": 10.0,
+      "quantity": 2.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+      "security_id": "8E4L9XLl6MudjEpwPAAgivmdZRdBPJuvMPlPb",
+      "institution_price": 0.011,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 110.0,
+      "cost_basis": 0.01,
+      "quantity": 10000.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "9EWp9Xpqk1ua6DyXQb89ikMARWA6eyUzAbPMg",
+      "institution_price": 39358.09375,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 115.57268,
+      "cost_basis": 120.03,
+      "quantity": 0.00293644,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+      "security_id": "abJamDazkgfvBkVGgnnLUWXoxnomp5up8llg4",
+      "institution_price": 42.15,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 210.75,
+      "cost_basis": 40.0,
+      "quantity": 5.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "lngLy3Le7vflLnAzKqwZs19l6bl8P5H1jG9Zz",
+      "institution_price": 20.0,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 430.0,
+      "cost_basis": 16.0,
+      "quantity": 21.5,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "JDdP7XPMklt5vwPmDN45t3KAoWAPmjtpaW7DP",
+      "institution_price": 27.0,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 636.309,
+      "cost_basis": 23.0,
+      "quantity": 23.567,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "QDQ13y1Ezxt51QbDb6A8cjk9EK978our9NaAM",
+      "institution_price": 94.808,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 948.08,
+      "cost_basis": 948.08,
+      "quantity": 10.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "nnmo8doZ4lfKNEDe3mPJipLGkaGw3jfPrpxoN",
+      "institution_price": 13.73,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 1373.6865,
+      "cost_basis": 15.0,
+      "quantity": 100.05,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "MD9eKXeplrt5yKRlzLqXiavwb6wrdxUb3wdnM",
+      "institution_price": 24.5,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 1855.875,
+      "cost_basis": 22.0,
+      "quantity": 75.75,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "eW4jmnjd6AtjxXVrjmj6SX1dNEdZp3Cy8RnRQ",
+      "institution_price": 34.73,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 7397.49,
+      "cost_basis": 30.0,
+      "quantity": 213.0,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+      "security_id": "d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+      "institution_price": 1.0,
+      "institution_price_as_of": "2021-05-25",
+      "institution_value": 12345.67,
+      "cost_basis": 1.0,
+      "quantity": 12345.67,
+      "iso_currency_code": "USD",
+      "unofficial_currency_code": null
+    }
+  ],
+  "summary": {
+    "total_accounts": 12,
+    "total_transactions": 16,
+    "total_holdings": 13
+  }
+}

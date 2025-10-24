@@ -1,0 +1,324 @@
+{
+  "fo_plaid_sandbox": {
+    "assets": [
+      {
+        "type": "cash_account",
+        "value": 110.0,
+        "name": "Plaid Checking (Checking)",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+        "mask": "0000",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 210.0,
+        "name": "Plaid Saving (Savings)",
+        "account_id": "6qdvgBW9nJfgep8JMDWPswDx9Kv5ozINd6g8ng",
+        "mask": "1111",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 1000.0,
+        "name": "Plaid CD (CD)",
+        "account_id": "XdBr8wnjbpSojLmQax9dSvP4G1kWVAuVeQdb8b",
+        "mask": "2222",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 43200.0,
+        "name": "Plaid Money Market",
+        "account_id": "V3rqWgANZoTrLMna38QjCKGnDqjmwzFxKaW9Np",
+        "mask": "4444",
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_account",
+        "value": 320.76,
+        "name": "Plaid IRA",
+        "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+        "mask": "5555",
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_account",
+        "value": 23631.9805,
+        "name": "Plaid 401k",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "mask": "6666",
+        "connection_status": "active"
+      },
+      {
+        "type": "other",
+        "value": 65262.0,
+        "name": "Plaid Student Loan",
+        "account_id": "6qdvgBW9nJfgep8JMDWPswDME7nRgWFNd6g8nm",
+        "mask": "7777",
+        "connection_status": "active"
+      },
+      {
+        "type": "other",
+        "value": 56302.06,
+        "name": "Plaid Mortgage",
+        "account_id": "XdBr8wnjbpSojLmQax9dSvPjrgQXZ8CVeQdb8D",
+        "mask": "8888",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 6009.0,
+        "name": "Plaid HSA",
+        "account_id": "DeVB8wadnKSGDlPdoJqxHLWxyeVPGgFV61v3Gd",
+        "mask": "9001",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 12060.0,
+        "name": "Plaid Cash Management",
+        "account_id": "V3rqWgANZoTrLMna38QjCKGd9kLVlQtxKaW9NN",
+        "mask": "9002",
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 0.01,
+        "name": "Security d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+        "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+        "security_id": "d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+        "quantity": 0.01,
+        "institution_price": 1.0,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 2.11,
+        "name": "Security KDwjlXj1Rqt58dVvmzRguxJybmyQL8FgeWWAy",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "KDwjlXj1Rqt58dVvmzRguxJybmyQL8FgeWWAy",
+        "quantity": 1.0,
+        "institution_price": 2.11,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 20.84,
+        "name": "Security NDVQrXQoqzt5v3bAe8qRt4A7mK7wvZCLEBBJk",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "NDVQrXQoqzt5v3bAe8qRt4A7mK7wvZCLEBBJk",
+        "quantity": 2.0,
+        "institution_price": 10.42,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 110.0,
+        "name": "Security 8E4L9XLl6MudjEpwPAAgivmdZRdBPJuvMPlPb",
+        "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+        "security_id": "8E4L9XLl6MudjEpwPAAgivmdZRdBPJuvMPlPb",
+        "quantity": 10000.0,
+        "institution_price": 0.011,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 115.57268,
+        "name": "Security 9EWp9Xpqk1ua6DyXQb89ikMARWA6eyUzAbPMg",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "9EWp9Xpqk1ua6DyXQb89ikMARWA6eyUzAbPMg",
+        "quantity": 0.00293644,
+        "institution_price": 39358.09375,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 210.75,
+        "name": "Security abJamDazkgfvBkVGgnnLUWXoxnomp5up8llg4",
+        "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+        "security_id": "abJamDazkgfvBkVGgnnLUWXoxnomp5up8llg4",
+        "quantity": 5.0,
+        "institution_price": 42.15,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 430.0,
+        "name": "Security lngLy3Le7vflLnAzKqwZs19l6bl8P5H1jG9Zz",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "lngLy3Le7vflLnAzKqwZs19l6bl8P5H1jG9Zz",
+        "quantity": 21.5,
+        "institution_price": 20.0,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 636.309,
+        "name": "Security JDdP7XPMklt5vwPmDN45t3KAoWAPmjtpaW7DP",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "JDdP7XPMklt5vwPmDN45t3KAoWAPmjtpaW7DP",
+        "quantity": 23.567,
+        "institution_price": 27.0,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 948.08,
+        "name": "Security QDQ13y1Ezxt51QbDb6A8cjk9EK978our9NaAM",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "QDQ13y1Ezxt51QbDb6A8cjk9EK978our9NaAM",
+        "quantity": 10.0,
+        "institution_price": 94.808,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 1373.6865,
+        "name": "Security nnmo8doZ4lfKNEDe3mPJipLGkaGw3jfPrpxoN",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "nnmo8doZ4lfKNEDe3mPJipLGkaGw3jfPrpxoN",
+        "quantity": 100.05,
+        "institution_price": 13.73,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 1855.875,
+        "name": "Security MD9eKXeplrt5yKRlzLqXiavwb6wrdxUb3wdnM",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "MD9eKXeplrt5yKRlzLqXiavwb6wrdxUb3wdnM",
+        "quantity": 75.75,
+        "institution_price": 24.5,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 7397.49,
+        "name": "Security eW4jmnjd6AtjxXVrjmj6SX1dNEdZp3Cy8RnRQ",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "eW4jmnjd6AtjxXVrjmj6SX1dNEdZp3Cy8RnRQ",
+        "quantity": 213.0,
+        "institution_price": 34.73,
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_holding",
+        "value": 12345.67,
+        "name": "Security d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "security_id": "d6ePmbPxgWCWmMVv66q9iPV94n91vMtov5Are",
+        "quantity": 12345.67,
+        "institution_price": 1.0,
+        "connection_status": "active"
+      }
+    ],
+    "liabilities": [
+      {
+        "type": "credit_card",
+        "value": 410.0,
+        "name": "Plaid Credit Card",
+        "account_id": "DeVB8wadnKSGDlPdoJqxHLW65oQwa1cV61v3G4",
+        "credit_limit": 2000.0,
+        "mask": "3333"
+      },
+      {
+        "type": "credit_card",
+        "value": 5020.0,
+        "name": "Plaid Business Credit Card",
+        "account_id": "wPJqK5V8RDSqplQRnAjgHpDlmbZJg4ckWGrPKd",
+        "credit_limit": 10000.0,
+        "mask": "9999"
+      }
+    ],
+    "cash_accounts": [
+      {
+        "type": "cash_account",
+        "value": 110.0,
+        "name": "Plaid Checking (Checking)",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EzePnl8kuDn9Ra5z",
+        "mask": "0000",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 210.0,
+        "name": "Plaid Saving (Savings)",
+        "account_id": "6qdvgBW9nJfgep8JMDWPswDx9Kv5ozINd6g8ng",
+        "mask": "1111",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 1000.0,
+        "name": "Plaid CD (CD)",
+        "account_id": "XdBr8wnjbpSojLmQax9dSvP4G1kWVAuVeQdb8b",
+        "mask": "2222",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 43200.0,
+        "name": "Plaid Money Market",
+        "account_id": "V3rqWgANZoTrLMna38QjCKGnDqjmwzFxKaW9Np",
+        "mask": "4444",
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_account",
+        "value": 320.76,
+        "name": "Plaid IRA",
+        "account_id": "vNAlqRV8gbSWmg7lGbxXUwzAlMEN7xFN8pWqVX",
+        "mask": "5555",
+        "connection_status": "active"
+      },
+      {
+        "type": "investment_account",
+        "value": 23631.9805,
+        "name": "Plaid 401k",
+        "account_id": "RKoG81gxwJHXB7rVnq96c4EaQjdqRNtDn9Ra5J",
+        "mask": "6666",
+        "connection_status": "active"
+      },
+      {
+        "type": "other",
+        "value": 65262.0,
+        "name": "Plaid Student Loan",
+        "account_id": "6qdvgBW9nJfgep8JMDWPswDME7nRgWFNd6g8nm",
+        "mask": "7777",
+        "connection_status": "active"
+      },
+      {
+        "type": "other",
+        "value": 56302.06,
+        "name": "Plaid Mortgage",
+        "account_id": "XdBr8wnjbpSojLmQax9dSvPjrgQXZ8CVeQdb8D",
+        "mask": "8888",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 6009.0,
+        "name": "Plaid HSA",
+        "account_id": "DeVB8wadnKSGDlPdoJqxHLWxyeVPGgFV61v3Gd",
+        "mask": "9001",
+        "connection_status": "active"
+      },
+      {
+        "type": "cash_account",
+        "value": 12060.0,
+        "name": "Plaid Cash Management",
+        "account_id": "V3rqWgANZoTrLMna38QjCKGd9kLVlQtxKaW9NN",
+        "mask": "9002",
+        "connection_status": "active"
+      }
+    ],
+    "metadata": {
+      "source": "plaid_sandbox",
+      "transformed_at": "2025-10-24T12:20:02.091237",
+      "original_item_id": "lkdAZ1VymgU14W9qMB3mU4w9xjy9K1FZ6L6Jy",
+      "total_accounts": 12,
+      "total_assets": 23,
+      "total_liabilities": 2
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "insights": [
+    {
+      "title": "High Tech Sector Concentration Risk",
+      "insight_type": "risk",
+      "description": "The portfolio exhibits significant concentration risk in the Technology sector, with $500,000 in MSFT and $700,000 in GOOG, totaling $1,200,000. This represents a substantial portion of the overall portfolio and exposes it to sector-specific downturns.",
+      "impact": "high",
+      "confidence": "high",
+      "recommendation": "Rebalance the portfolio to reduce Tech sector exposure by diversifying into other sectors like Healthcare, Consumer Staples, or Utilities. Consider selling a portion of MSFT or GOOG holdings and reinvesting in lower-correlated assets.",
+      "supporting_data": [
+        "MSFT value: $500,000",
+        "GOOG value: $700,000",
+        "Total portfolio value (excluding liabilities): $5,700,000"
+      ],
+      "priority": 2
+    },
+    {
+      "title": "Real Estate Insurance Lapse - Immediate Action Required",
+      "insight_type": "alert",
+      "description": "The 'Main St Property' real estate asset has an 'inactive' insurance status. This poses a significant financial risk, as the property is uninsured against potential damages or liabilities.",
+      "impact": "high",
+      "confidence": "high",
+      "recommendation": "Immediately reinstate insurance coverage for the 'Main St Property'. Contact the insurance provider to understand the reason for the lapse and ensure continuous coverage going forward.",
+      "supporting_data": [
+        "Real Estate Asset: Main St Property",
+        "Insurance Status: inactive"
+      ],
+      "priority": 1
+    },
+    {
+      "title": "Upcoming Capital Call - Liquidity Planning Needed",
+      "insight_type": "action",
+      "description": "A capital call of $2,000,000 is due on 2025-11-15. This requires careful liquidity planning to ensure sufficient funds are available to meet the obligation without disrupting the portfolio's overall strategy.",
+      "impact": "medium",
+      "confidence": "high",
+      "recommendation": "Assess the current cash position and projected cash flows to determine the funding source for the capital call. Consider liquidating less strategic assets or securing a line of credit if necessary. Monitor cash balances in 'Chase Checking' and 'BofA Savings'.",
+      "supporting_data": [
+        "Capital Call Value: $2,000,000",
+        "Due Date: 2025-11-15"
+      ],
+      "priority": 3
+    },
+    {
+      "title": "Stale Bank Connection - Data Integrity Issue",
+      "insight_type": "risk",
+      "description": "The 'BofA Savings' account has a 'stale' connection status. This indicates that the balance of $250,000 may not be up-to-date, potentially impacting cash flow analysis and liquidity management.",
+      "impact": "medium",
+      "confidence": "high",
+      "recommendation": "Reconnect the 'BofA Savings' account to ensure accurate and up-to-date balance information. Investigate the cause of the connection issue and implement measures to prevent future disruptions.",
+      "supporting_data": [
+        "Bank Account: BofA Savings",
+        "Connection Status: stale",
+        "Balance: $250,000"
+      ],
+      "priority": 3
+    },
+    {
+      "title": "Compliance Filing Deadline Approaching",
+      "insight_type": "alert",
+      "description": "The compliance filing for 'Trust ABC' is due on 2025-11-05 and its document status is 'pending'. Failure to meet this deadline could result in penalties or legal issues.",
+      "impact": "medium",
+      "confidence": "high",
+      "recommendation": "Prioritize the completion and submission of the compliance filing for 'Trust ABC' before the 2025-11-05 deadline. Ensure all required documentation is accurate and complete.",
+      "supporting_data": [
+        "Compliance Filing: Trust ABC",
+        "Due Date: 2025-11-05",
+        "Document Status: pending"
+      ],
+      "priority": 4
+    }
+  ],
+  "summary": "The portfolio faces immediate risks related to real estate insurance and tech sector concentration. Liquidity planning is crucial for an upcoming capital call, and data integrity needs improvement due to a stale bank connection. A compliance filing deadline is also approaching. Addressing these issues will enhance portfolio stability and compliance.",
+  "total_insights": 5,
+  "analysis_timestamp": "2025-10-24T08:31:34.242554"
+}
