@@ -1,6 +1,6 @@
-# AI Insights Agent - Restructured Project
+# AI Insights Agent 
 
-A sophisticated AI-powered financial analysis agent that fetches real data from Plaid and generates actionable insights using Google's Gemini AI.
+A sophisticated AI-powered financial Insights analysis agent that fetches real data from Plaid and generates actionable insights using Google's Gemini AI.
 
 ##  Project Structure
 
