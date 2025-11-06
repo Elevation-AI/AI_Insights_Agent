@@ -1,8 +1,8 @@
-# AI Insights Agent - Restructured Project
+# AI Insights Agent 
 
-A sophisticated AI-powered financial analysis agent that fetches real data from Plaid and generates actionable insights using Google's Gemini AI.
+A sophisticated AI-powered financial Insights analysis agent that fetches real data from Plaid and generates actionable insights using Google's Gemini AI.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AI_Insights_agent_mvp/
@@ -35,7 +35,7 @@ AI_Insights_agent_mvp/
 └── README.md                   # This file
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Interactive Menu (Recommended)
 ```bash
@@ -54,9 +54,9 @@ python src/agent/plaid_data_transformer.py
 python src/agent/run_analysis_with_plaid.py
 ```
 
-## 📋 Features
+##  Features
 
-### ✅ **Completed Features**
+###  **Completed Features**
 - **Plaid Integration**: Real-time data fetching from Plaid sandbox
 - **Data Transformation**: Convert Plaid format to family office schema
 - **AI Analysis**: Generate insights using Gemini 2.0 Flash
@@ -65,20 +65,20 @@ python src/agent/run_analysis_with_plaid.py
 - **Error Handling**: Robust retry logic and error management
 - **Organized Structure**: Clean separation of concerns
 
-### 🔄 **Data Pipeline**
+###  **Data Pipeline**
 1. **Fetch**: Get real financial data from Plaid sandbox
 2. **Transform**: Convert to family office format
 3. **Analyze**: Generate AI-powered insights
 4. **Output**: Save structured results
 
-### 📊 **Analysis Capabilities**
+###  **Analysis Capabilities**
 - **Risk Assessment**: Concentration, liquidity, compliance risks
 - **Opportunity Identification**: Portfolio optimization opportunities
 - **Action Items**: Immediate and strategic recommendations
 - **Alerts**: Critical issues requiring attention
 - **Data Quality**: Connection status and data freshness
 
-## 🛠️ Setup
+##  Setup
 
 ### 1. Install Dependencies
 ```bash
@@ -98,7 +98,7 @@ PLAID_SECRET=your_plaid_secret
 python setup.py
 ```
 
-## 📈 Usage Examples
+##  Usage Examples
 
 ### Fetch and Analyze Real Data
 ```python
@@ -128,7 +128,7 @@ from prompts.prompts import V1_SYSTEM_PROMPT
 custom_prompt = f"{V1_SYSTEM_PROMPT}\n\nAnalyze this data..."
 ```
 
-## 📁 Output Files
+##  Output Files
 
 ### `output/` Directory Contents:
 - **`plaid_data.json`**: Raw Plaid API response
@@ -173,7 +173,7 @@ custom_prompt = f"{V1_SYSTEM_PROMPT}\n\nAnalyze this data..."
 - **Products**: Transactions, Investments
 - **Retry Logic**: 3 attempts with 5-second delays
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run structure tests
@@ -184,7 +184,7 @@ python src/agent/plaid_data_fetcher_simple.py
 python src/agent/plaid_data_transformer.py
 ```
 
-## 🚀 Next Steps
+##  Next Steps
 
 ### Production Readiness
 1. **Database Integration**: Replace JSON files with proper database
@@ -200,7 +200,7 @@ python src/agent/plaid_data_transformer.py
 - **Alerts**: Real-time notifications
 - **Reporting**: PDF report generation
 
-## 📞 Support
+##  Support
 
 For issues or questions:
 1. Check the troubleshooting section in individual scripts
@@ -210,5 +210,5 @@ For issues or questions:
 
 ---
 
-**Status**: ✅ Fully functional MVP with real Plaid integration
+**Status**:  Fully functional MVP with real Plaid integration
 **Last Updated**: October 2024
