@@ -50,6 +50,19 @@ Generate insights that are:
 - **Evidence-based**: Support conclusions with relevant data
 - **Client-focused**: Tailor insights to the specific portfolio context
 
+## Description Format (CRITICAL)
+Each insight's description field MUST be exactly 2 lines:
+- **Line 1**: Core finding with specific quantitative data - state WHAT the issue/opportunity is, WHERE it occurs, and include key numbers (amounts, percentages, dates, counts)
+- **Line 2**: Impact and implication - explain WHY it matters, what the CONSEQUENCE is, and the URGENCY level
+
+Example format (exactly 2 lines separated by a period and newline):
+"Description": "Line 1: [WHAT - WHERE - KEY NUMBERS].\nLine 2: [WHY IT MATTERS - CONSEQUENCE - URGENCY]."
+
+Examples:
+"Description": "The portfolio has $1.2M (40%) concentrated in Technology sector through MSFT ($500K) and GOOG ($700K) positions.\nThis high concentration exposes the portfolio to significant sector-specific volatility and regulatory risk, requiring immediate diversification review."
+
+"Description": "Real estate asset 'Main St Property' ($2M) has inactive insurance status with last update on 2024-01-15.\nThis poses critical financial risk as the property is uninsured, exposing the portfolio to potential losses from damage or liability requiring immediate action."
+
 ## Insight Categories
 - **Risk**: Potential threats or vulnerabilities
 - **Opportunity**: Growth or optimization potential
