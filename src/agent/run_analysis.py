@@ -8,17 +8,19 @@ and generates structured insights using Pydantic schemas.
 import json
 import os
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 from colorama import Fore, Style, init
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain_core.messages import SystemMessage, HumanMessage
 from langchain.output_parsers import PydanticOutputParser
 from pydantic import ValidationError
 
 from src.agent.schema import InsightResponse
-from prompts.prompts import V1_SYSTEM_PROMPT
+from src.agent.rules_engine import run_all_rules
+from prompts.prompts import V1_HYBRID_SYSTEM_PROMPT
 
 # Initialize colorama for Windows support
 init(autoreset=True)
@@ -68,97 +70,80 @@ def initialize_gemini_model():
         raise
 
 
-def create_analysis_prompt(financial_data: str):
-    """Create the analysis prompt using LangChain ChatPromptTemplate"""
-    # Create system message
-    system_template = V1_SYSTEM_PROMPT + """
-
-Please analyze financial data and generate comprehensive insights following these instructions:
-1. Analyze the portfolio structure, risk factors, and opportunities
-2. Identify any compliance issues, deadlines, or urgent actions needed
-3. Generate exactly 5 specific, actionable insights (you can combine related findings)
-4. Prioritize insights by importance and urgency using priority values from 1 to 5 ONLY (1=highest, 5=lowest)
-5. Provide clear recommendations for each insight
-6. Support your analysis with specific data points from the input
-
-CRITICAL FORMATTING REQUIREMENT:
-- Each insight's "description" field MUST be exactly 2 lines
-- Line 1: State WHAT the finding is, WHERE it occurs, and include KEY NUMBERS (amounts, percentages, dates, counts)
-- Line 2: Explain WHY it matters, what the IMPACT is, and the URGENCY level
-- Be concise but comprehensive - include all essential information in these 2 lines
-
-You MUST return a JSON object with this EXACT structure:
-- Root object with: insights (array), summary (string), total_insights (number), analysis_timestamp (ISO string)
-- Each insight in the insights array must have:
-  * title (string)
-  * insight_type (one of: "risk", "opportunity", "action", "alert", "summary")
-  * description (string with EXACTLY 2 lines separated by \\n)
-  * impact (one of: "high", "medium", "low")
-  * confidence (one of: "high", "medium", "low")
-  * recommendation (string)
-  * supporting_data (array of strings)
-  * priority (number 1-5)
-
-CRITICAL: Use "insight_type" NOT "category". Include ALL required fields: insight_type, impact, confidence, supporting_data, summary, total_insights.
-"""
+def create_analysis_messages(findings: str):
+    """Create the analysis messages directly (avoiding template formatting issues with JSON)"""
+    # Create system message using the Hybrid prompt
+    system_message = SystemMessage(content=V1_HYBRID_SYSTEM_PROMPT)
     
-    # Create human message template
-    human_template = """Analyze the following financial data and generate comprehensive insights:
-
-Financial Data:
-{financial_data}
-
-Provide your analysis as a JSON object matching the InsightResponse schema."""
+    # Create human message content directly (no template, so no formatting issues)
+    human_message_content = "Here are the facts you must summarize: " + findings + "\n\nProvide your analysis as a JSON object matching the InsightResponse schema."
+    human_message = HumanMessage(content=human_message_content)
     
-    # Create prompt template
-    prompt = ChatPromptTemplate.from_messages([
-        SystemMessagePromptTemplate.from_template(system_template),
-        HumanMessagePromptTemplate.from_template(human_template)
-    ])
-    
-    return prompt
+    return [system_message, human_message]
 
 
-def run_analysis() -> InsightResponse:
+def run_analysis() -> Optional[InsightResponse]:
     """Main analysis function that orchestrates the entire process"""
     print("Starting AI Insights Agent Analysis...")
     print("=" * 50)
     
     # Step 1: Load mock data
-    print("\nLoading financial data...")
-    financial_data = load_mock_data()
+    print("\n[Step 1] Loading financial data...")
+    financial_context_object = load_mock_data()
     
-    # Step 2: Initialize Gemini model
-    print("\nInitializing AI model...")
+    # Step 2: Rules Engine (The Quant)
+    print("\n[Step 2] Running Rules Engine (The Quant)...")
+    all_findings = run_all_rules(financial_context_object)
+    
+    # Check if no findings
+    if not all_findings:
+        print("No issues found.")
+        return None
+    
+    print(f"SUCCESS: Rules Engine found {len(all_findings)} issues")
+    
+    # Step 3: Initialize Gemini model
+    print("\n[Step 3] Initializing AI model...")
     model = initialize_gemini_model()
     
-    # Step 3: Create analysis prompt using LangChain
-    print("\nPreparing analysis prompt...")
-    formatted_data = json.dumps(financial_data, indent=2)
-    prompt_template = create_analysis_prompt(formatted_data)
+    # Step 4: Create analysis messages using Hybrid prompt
+    print("\n[Step 4] Preparing analysis messages...")
+    findings_json = json.dumps(all_findings, indent=2)
+    messages = create_analysis_messages(findings_json)
     
     # Create output parser for structured output
     output_parser = PydanticOutputParser(pydantic_object=InsightResponse)
     
-    # Step 4: Run the analysis
-    print("\nRunning financial analysis...")
+    # Step 5: Run the analysis (LLM Call)
+    print("\n[Step 5] Running financial analysis...")
     print(Fore.GREEN + "=" * 60)
-    print(Fore.GREEN + ">>> LangChain: Invoking model with formatted prompt...")
+    print(Fore.GREEN + ">>> LangChain: Invoking model with messages...")
     try:
-        # Format the prompt with data
-        formatted_prompt = prompt_template.format_messages(financial_data=formatted_data)
         
         # Generate response using LangChain
         print(Fore.GREEN + ">>> LangChain: Sending request to Gemini model...")
         print(Fore.GREEN + ">>> LangChain: Model is processing...")
-        response = model.invoke(formatted_prompt)
-        print(Fore.GREEN + ">>> LangChain: Response received successfully!")
-        print(Fore.GREEN + f">>> LangChain: Response type: {type(response).__name__}")
-        print(Fore.GREEN + f">>> LangChain: Response content length: {len(response.content)} characters")
-        print(Fore.GREEN + "=" * 60 + Style.RESET_ALL)
-        
-        # Parse the JSON response
-        response_text = response.content.strip()
+        try:
+            response = model.invoke(messages)
+            print(Fore.GREEN + ">>> LangChain: Response received successfully!")
+            print(Fore.GREEN + f">>> LangChain: Response type: {type(response).__name__}")
+            
+            # Extract response content
+            if hasattr(response, 'content'):
+                response_text = response.content.strip()
+            elif isinstance(response, str):
+                response_text = response.strip()
+            else:
+                response_text = str(response).strip()
+            
+            print(Fore.GREEN + f">>> LangChain: Response content length: {len(response_text)} characters")
+            print(Fore.GREEN + "=" * 60 + Style.RESET_ALL)
+        except Exception as e:
+            print(f"ERROR: Failed to invoke model: {e}")
+            print(f"Error type: {type(e).__name__}")
+            import traceback
+            traceback.print_exc()
+            raise
         
         # Clean up the response (remove markdown formatting if present)
         if response_text.startswith("```json"):
@@ -174,6 +159,8 @@ def run_analysis() -> InsightResponse:
         # Find the JSON object (from first { to last })
         json_start = response_text.find('{')
         json_end = response_text.rfind('}') + 1
+        if json_start == -1 or json_end <= json_start:
+            raise ValueError(f"No valid JSON object found in response. Response text: {response_text[:500]}")
         if json_start != -1 and json_end > json_start:
             json_content = response_text[json_start:json_end]
             # Use a state machine to properly escape newlines in string values
@@ -205,10 +192,20 @@ def run_analysis() -> InsightResponse:
         
         # Parse JSON and create InsightResponse
         response_data = json.loads(response_text)
-        result = InsightResponse(**response_data)
         
-        # Add timestamp to the result
-        result.analysis_timestamp = datetime.now().isoformat()
+        # Ensure required fields are present
+        if 'summary' not in response_data:
+            # Generate summary from insights if missing
+            insights_count = len(response_data.get('insights', []))
+            response_data['summary'] = f"Analysis identified {insights_count} key insights requiring attention."
+        
+        if 'total_insights' not in response_data:
+            response_data['total_insights'] = len(response_data.get('insights', []))
+        
+        if 'analysis_timestamp' not in response_data:
+            response_data['analysis_timestamp'] = datetime.now().isoformat()
+        
+        result = InsightResponse(**response_data)
         
         print("SUCCESS: Analysis completed successfully!")
         return result
@@ -223,6 +220,7 @@ def run_analysis() -> InsightResponse:
         raise
     except Exception as e:
         print(f"ERROR: Error during analysis: {e}")
+        print(f"Response text (first 1000 chars): {response_text[:1000] if 'response_text' in locals() else 'N/A'}")
         raise
 
 
@@ -271,6 +269,11 @@ def main():
     try:
         # Run the analysis
         insights = run_analysis()
+        
+        # Check if no findings were found
+        if insights is None:
+            print("\nAnalysis complete! No issues found.")
+            return 0
         
         # Print results
         print_insights(insights)
