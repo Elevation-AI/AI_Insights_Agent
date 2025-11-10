@@ -4,6 +4,8 @@
       {"type": "stock", "value": 500000, "sector": "Tech", "ticker": "MSFT"},
       {"type": "stock", "value": 700000, "sector": "Tech", "ticker": "GOOG"},
       {"type": "private_equity", "value": 1500000, "name": "SaaSCo", "last_valuation_date": "2024-01-15"},
+      {"type": "private_equity", "value": 800000, "name": "TechVentures", "last_valuation_date": "2023-08-20"},
+      {"type": "private_equity", "value": 1200000, "name": "HealthTech Fund", "last_valuation_date": "2023-12-10"},
       {"type": "real_estate", "value": 2000000, "name": "Main St Property", "insurance_status": "inactive"},
       {"type": "lp_position", "value": 1000000, "fund_name": "GrowthFund", "underlying_holdings": [{"name": "SaaSCo", "percentage": 0.3}]}
     ],

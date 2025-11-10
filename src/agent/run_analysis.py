@@ -36,7 +36,7 @@ if not os.getenv("GOOGLE_API_KEY"):
     )
 
 
-def load_mock_data(file_path: str = "mock_data.json") -> Dict[str, Any]:
+def load_mock_data(file_path: str = "input/mock_data.json") -> Dict[str, Any]:
     """Load the mock financial data from JSON file"""
     
     with open(file_path, 'r') as file:
@@ -194,13 +194,14 @@ def run_analysis() -> Optional[InsightResponse]:
         response_data = json.loads(response_text)
         
         # Ensure required fields are present
+        insights_count = len(response_data.get('insights', []))
+        
         if 'summary' not in response_data:
             # Generate summary from insights if missing
-            insights_count = len(response_data.get('insights', []))
             response_data['summary'] = f"Analysis identified {insights_count} key insights requiring attention."
         
         if 'total_insights' not in response_data:
-            response_data['total_insights'] = len(response_data.get('insights', []))
+            response_data['total_insights'] = insights_count
         
         if 'analysis_timestamp' not in response_data:
             response_data['analysis_timestamp'] = datetime.now().isoformat()

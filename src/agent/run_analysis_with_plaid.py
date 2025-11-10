@@ -203,13 +203,14 @@ def run_analysis_with_data(financial_data: Dict[str, Any], data_source: str = "m
         response_data = json.loads(response_text)
         
         # Ensure required fields are present
+        insights_count = len(response_data.get('insights', []))
+        
         if 'summary' not in response_data:
             # Generate summary from insights if missing
-            insights_count = len(response_data.get('insights', []))
             response_data['summary'] = f"Analysis identified {insights_count} key insights requiring attention."
         
         if 'total_insights' not in response_data:
-            response_data['total_insights'] = len(response_data.get('insights', []))
+            response_data['total_insights'] = insights_count
         
         if 'analysis_timestamp' not in response_data:
             response_data['analysis_timestamp'] = datetime.now().isoformat()
